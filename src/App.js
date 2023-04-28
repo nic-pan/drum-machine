@@ -21,14 +21,16 @@ function App() {
   document.addEventListener('keydown', playSound);
 
   return (
-  <div class="container px-4">
-      <div id="drum-machine" className='row gx-5'>
+  <div className="container px-4">
+    <div className='position-relative'>
+      <div id="drum-machine" className='row'>
         {drumPadItems}
         <div id="display">
           {audioSrc}
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

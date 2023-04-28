@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import DrumButton from "./DrumButton";
 
 function DrumPad(props) {
     const audio = React.createRef();
@@ -20,7 +21,8 @@ function DrumPad(props) {
     return (
         <div className={props.className + " DrumPad"}>
             <audio ref={audio} id={props.id} className="clip" src={props.src}></audio>
-            <button className="btn btn-outline-dark" onClick={playAudio}>{props.id}</button>
+            {/* <button className="btn btn-outline-dark drum-btn" onClick={playAudio}>{props.id}</button> */}
+            <DrumButton id={props.id} onClick={playAudio}/>
         </div>
      );
 }
